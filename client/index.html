@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shashank - Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div id='header'>
+        <div class="container">
+            <nav>
+                <h3 class="logo">shashank</h3>
+               
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+
+            </ul>
+            </nav>
+            <div class="header-text">
+                <p>FIRST DESIGN</p>
+                <h1>Hi, I'm <span>Shashank</span><br>From MBU </h1>
+            </div>
+        </div>
+    </div>
+    
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col1">
+                    <img src="/imgs/main.jpg"> 
+                </div>
+                <div class="about-col2">
+                    <h1 class="sub">About Me</h1> 
+                    <p> This is Shashank a enthusiastic fresher willing to work and gain experince currently 
+                        studying 4th year btech in MBU acted as a volunteer Class Representative,
+                        participated in NSS Activities  currently having a Aggrigate of 7.6 CGPA.
+                    </p>
+                    <div class="tabletitle">
+                        <p class="tablelink active" onclick="opentab('skills')">Skills</p>
+                        <p class="tablelink" onclick="opentab('Experience')">Experince</p>
+                        <p class="tablelink" onclick="opentab('projects')">Projects</p>
+                    </div>
+                        
+                        <div class="tablecontent active-con" id='skills'>
+                            <ul>
+                                <li><span>UI/UX Design</span><br>Web Development/Frontend</li>
+                                <li><span>Programming Languages</span><br>Python<br>Java<br>Html,css,js</li>
+                            </ul>
+                        </div>
+                        <div class="tablecontent" id='Experience'>
+                            <ul>
+                                <li><span>Current</span><br>MBU 4th year btech</li>
+                                
+                            </ul>
+                        </div>
+                        <div class="tablecontent" id='projects'>
+                            <ul>
+                                <li><span>UI/UX Design</span><br>Protfolio</li>
+                                <li><span>Python</span><br>sudoku solver<br>slot machine</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <div class="service-list-icon" >
+                        
+                    <i class="fa-solid fa-code"style="color: #82868c;"></i>
+                    </div>
+                    <h2>Web design</h2>
+                    <a href="#">Learn more.</a>
+                </div>
+                <div>
+                    <div class="service-list-icon">
+                        
+                    <i class="fa-brands fa-python"  style="color: #82868c;"></i>
+                    </div>
+                    <h2>Python</h2>
+                    <a href="#">Learn more.</a>
+                </div>
+                <div>
+                    <div class="service-list-icon">
+                        
+                    <i class="fa-solid fa-brain" style="color: #82868c;"></i>
+                    </div>
+                    <h2>Machine Learning</h2>
+                    <a href="#">Learn more.</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--contact------->  
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub">Contact Me</h1>
+                    <p>ynvshashank09@gmail.com</p>
+                    <p>9618954967</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=100016569488870"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://twitter.com/yShashank4"><i class="fa-brands fa-twitter-square"></i></a>
+                        <a href="https://www.instagram.com/ynvshashank/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/shashank-y-5a8519228/"><i class="fa-brands fa-linkedin"></i></a>
+
+                    </div>
+                    
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="9" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright @ Shashank.<i class="fa-solid fa-heart"></i></p>
+        </div>
+    </div>  
+
+
+
+
+
+
+
+
+
+
+
+<script src="gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script>
+        // Wait for the page to load
+        window.addEventListener('load', function () {
+            // Animations for the header
+            gsap.from("#header .logo", { opacity: 0, duration: 1, delay: 0.5 });
+            gsap.from("#header nav ul li", { opacity: 0, y: -20, stagger: 0.2, duration: 1, delay: 0.8 });
+            gsap.from("#header .header-text p, #header .header-text h1", { opacity: 0, y: 20, duration: 1, delay: 1.2 });
+
+            // Animations for the "About Me" section
+            gsap.from("#about .about-col1", { opacity: 0, x: -50, duration: 1, scrollTrigger: "#about .about-col1" });
+            gsap.from("#about .about-col2", { opacity: 0, x: 50, duration: 1, scrollTrigger: "#about .about-col2" });
+        });
+                // Wait for the page to load
+                window.addEventListener('load', function () {
+            const element1 = document.getElementsByClassName("tablecontent1")[0];
+            const element2 = document.getElementsByClassName("tablecontent2")[0];
+            const element3 = document.getElementsByClassName("tablecontent3")[0];
+
+            element1.addEventListener("click", function () {
+                element1.style.display = "block";
+                element2.style.display = "none";
+                element3.style.display = "none";
+            });
+
+            element2.addEventListener("click", function () {
+                element2.style.display = "block";
+                element1.style.display = "none";
+                element3.style.display = "none";
+            });
+
+            element3.addEventListener("click", function () {
+                element3.style.display = "block";
+                element1.style.display = "none";
+                element2.style.display = "none";
+            });
+        });
+</script>
+<script src="https://kit.fontawesome.com/1e22cc20e3.js" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

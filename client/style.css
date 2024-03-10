@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+#header{
+    width :100%;
+    height: 100vh;
+    background-image: url(imgs/backgroundimg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+body {
+    background-color: rgb(19, 19, 19);
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container{
+    padding: 10px 10%;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 10px 10px;
+    display: inline-block;
+}
+
+nav ul li a ,h3.logo{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content:'';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+}
+.header-text h1 span{
+    color: #ff004f;
+}
+#about{
+    padding: 80px 0;
+    color: #ababab;
+    background-image: url(/imgs/background-remain.png);
+    background-size: cover;
+    background-position: center;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col1{
+    flex-basis: 35%;
+}
+.about-col1 img{
+    width:100%;
+    border-radius: 15px;
+}
+.about-col2{
+    flex-basis: 60%;
+}
+
+.sub{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+.about-col2 p{
+    margin-top: 3vh;
+    font-size: 90%;
+}
+
+.tabletitle{
+    display:flex;
+    margin: 20px 0 40px;
+}
+.tablelink{
+    user-select: none;
+    margin-right: 50px;
+    font-size: 50px;
+    font-weight: 700;
+    position: relative;
+    cursor: pointer;
+}
+.tablelink::after{
+    content:'';
+    background: #f50451;
+    height: 3px;
+    width: 0px;
+    position: absolute;
+    transition: 0.5s;
+    left: 0;
+    bottom: -8px;
+
+}
+
+.tablelink.active::after{
+    width: 50%;
+}
+
+.tablecontent ul li{
+
+    list-style: none;
+    margin:10px 0;
+}
+
+.tablecontent ul li span{
+    color: #f50451;
+    font-size: 15px;
+}
+
+
+.tablecontent{
+    display:none;
+}
+.tablecontent.active-con{
+    display:block;
+}
+
+
+#services{
+    padding: 30px 0;
+    background-image: url("/imgs/background-remain.png");
+    background-size: cover;
+    background-position: center;
+
+}
+
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    margin-top: 50px;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.services-list div{
+    
+    background: #2d2c2c;
+    padding: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 10px;    
+    transition: transform 0.5s;
+}
+.service-list-icon i{
+    font-size: 40px;
+    text-align: center;
+}
+.service-list-icon{
+    display: flex;
+    background-color: rgb(74, 71, 71) !important;
+    border-radius: 50% !important;
+    width: 3vw;
+    height: 3vw;
+    margin: auto;
+    color: #1f1c1c;
+}
+.service-list-icon:hover{
+    background-color:  #f50451 !important;
+    border-radius: 50% !important;
+    width: 3vw;
+    height: 3vw;
+    transform: translateY(-10px);
+}
+
+.services-list div h2{
+    margin-top: 30px;
+    font-size: 30px;
+    
+}
+   
+
+/*--------------------------*/
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 65%;
+}
+
+.contact-left p {
+    color:#ff004f;
+    margin-right:15px;
+    font-size: 25px;
+}
+
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color:#ababab;
+    display: inline-block;
+    transition:transform 0.5s;
+}
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+
+.btn.btn2{
+    display:inline-block;
+    background: #ff004f;
+}
+
+.contact-right form{
+    width: 100%;
+}
+
+form input,form textarea{
+    width:100%;
+    border:0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color:#fff;
+    font-size: 18px;
+    border-radius: 6px;
+
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.copyright i{
+    color:#ff004f;
+}
+
+#msg{
+    color: #61b752;
+    
+    display: block;
+}
